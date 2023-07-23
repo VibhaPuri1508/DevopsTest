@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="6" name="Failed suite [CrossBrowser]" parallel="tests">
+  <parameter name="browser" value="IE"/>
+  <listeners>
+    <listener class-name="com.ecstore.utility.ListenerClass"/>
+  </listeners>
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.ecstore.testcases.OrderConfirmedTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ecstore.testcases.OrderConfirmedTest -->
+      <class name="com.ecstore.testcases.LoginPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ecstore.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.ecstore.testcases.OrderConfirmedTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ecstore.testcases.OrderConfirmedTest -->
+      <class name="com.ecstore.testcases.LoginPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="loginTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ecstore.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [CrossBrowser] -->
