@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Smoke</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 01 16:09:42 IST 2023</td>
+<td>Started on:</td><td>Mon Jul 24 15:14:22 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>69 seconds (69884 ms)</td>
+<tr><td>Total time:</td><td>96 seconds (96110 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Smoke </td>
 </tr><tr>
@@ -67,6 +67,50 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecstore.testcases.HomePageTest.verifyTitleError()'><b>verifyTitleError</b><br>Test class: com.ecstore.testcases.HomePageTest</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;Home Page&gt; but was:&lt;Home Page1&gt;
+	at com.ecstore.testcases.HomePageTest.verifyTitleError(HomePageTest.java:49)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace746327606", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace746327606'><pre>java.lang.AssertionError: expected:&lt;Home Page&gt; but was:&lt;Home Page1&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
+	at com.ecstore.testcases.HomePageTest.verifyTitleError(HomePageTest.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.ecstore.testcases.HomePageTest@5b6813df</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,33 +121,33 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.ecstore.testcases.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.ecstore.testcases.LoginPageTest<br>Parameters: vpdp@gmail.com, vpdp@12345P</td>
 <td></td>
-<td>6</td>
-<td>com.ecstore.testcases.LoginPageTest@1a245833</td></tr>
+<td>7</td>
+<td>com.ecstore.testcases.LoginPageTest@3e2822</td></tr>
 <tr>
 <td title='com.ecstore.testcases.SearchResultTest.searchProduct()'><b>searchProduct</b><br>Test class: com.ecstore.testcases.SearchResultTest</td>
 <td></td>
-<td>5</td>
-<td>com.ecstore.testcases.SearchResultTest@5965d37</td></tr>
+<td>3</td>
+<td>com.ecstore.testcases.SearchResultTest@79e18e38</td></tr>
 <tr>
 <td title='com.ecstore.testcases.MyAccountPageTest.validateOrderHistory()'><b>validateOrderHistory</b><br>Test class: com.ecstore.testcases.MyAccountPageTest</td>
 <td></td>
-<td>10</td>
-<td>com.ecstore.testcases.MyAccountPageTest@673fdbce</td></tr>
+<td>11</td>
+<td>com.ecstore.testcases.MyAccountPageTest@533b266e</td></tr>
 <tr>
 <td title='com.ecstore.testcases.MyAccountPageTest.validateWishList()'><b>validateWishList</b><br>Test class: com.ecstore.testcases.MyAccountPageTest</td>
 <td></td>
-<td>13</td>
-<td>com.ecstore.testcases.MyAccountPageTest@673fdbce</td></tr>
+<td>11</td>
+<td>com.ecstore.testcases.MyAccountPageTest@533b266e</td></tr>
 <tr>
 <td title='com.ecstore.testcases.HomePageTest.verifyLogo()'><b>verifyLogo</b><br>Test class: com.ecstore.testcases.HomePageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ecstore.testcases.HomePageTest@6f01b95f</td></tr>
+<td>com.ecstore.testcases.HomePageTest@5b6813df</td></tr>
 <tr>
 <td title='com.ecstore.testcases.HomePageTest.verifyTitle()'><b>verifyTitle</b><br>Test class: com.ecstore.testcases.HomePageTest</td>
 <td></td>
 <td>0</td>
-<td>com.ecstore.testcases.HomePageTest@6f01b95f</td></tr>
+<td>com.ecstore.testcases.HomePageTest@5b6813df</td></tr>
 </table><p>
 </body>
 </html>
