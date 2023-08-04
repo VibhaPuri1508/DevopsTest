@@ -1,5 +1,5 @@
 pipeline{
-   agents any
+   agent any
      environment{
      notifyEmail ="vibhapuri45@gmail.com"
     }
