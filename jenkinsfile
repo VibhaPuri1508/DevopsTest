@@ -15,12 +15,12 @@ pipeline{
           bat "echo starting the program"
        }
      }
-    stage("code build"){
+    stage("code clean"){
          steps{
           bat "mvn clean"
        }
      }
-    stage("code build"){
+    stage("code test"){
          steps{
           bat "mvn test"
        }
