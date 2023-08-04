@@ -14,12 +14,12 @@ pipeline{
      }
     stage("code clean"){
          steps{
-          bat "mvn clean"
+          bat "mvn install"
        }
      }
     stage("code test"){
          steps{
-          bat "mvn test"
+          bat "mvn clean test"
        }
      }
   }
