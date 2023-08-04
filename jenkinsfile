@@ -1,0 +1,35 @@
+pipeline{
+   agents any
+     environment{
+     notifyEmail ="vibhapuri45@gmail.com"
+    }
+     tools{
+         maven 'maven_home'
+    }
+    triggers{
+     cron(' 0 06 * * * ')
+    } 
+    stages{
+     stage("code build"){
+         steps{
+          bat "echo starting the program"
+       }
+     }
+    stage("code build"){
+         steps{
+          bat "mvn clean"
+       }
+     }
+    stage("code build"){
+         steps{
+          bat "mvn test"
+       }
+     }
+  }
+  post{
+     success {
+      bat "echo success"
+     }
+  }
+
+}
