@@ -1,10 +1,7 @@
 pipeline{
    agent any
      environment{
-     notifyEmail ="vibhapuri45@gmail.com"
-    }
-    tools{
-     maven 'MAVEN_HOME'
+      PATH = "C:\Program Files\apache-maven-3.9.3\bin"
     }
     triggers{
      cron(' 0 06 * * * ')
