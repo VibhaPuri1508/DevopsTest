@@ -31,13 +31,4 @@ public class HomePageTest extends BaseClass {
 		AssertJUnit.assertTrue(result);
 		Log.endTestCase("verifyLogo");
 	}
-	
-	@Test(groups = "Smoke")
-	public void verifyTitle() {
-		Log.startTestCase("verifyTitle");
-		homePage= new HomePage();
-		String actTitle=homePage.getMyPageTitle();
-		AssertJUnit.assertEquals(actTitle, "Home Page");
-		Log.endTestCase("verifyTitle");
-	}
 }

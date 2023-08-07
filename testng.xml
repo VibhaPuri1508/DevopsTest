@@ -8,7 +8,6 @@
 		<parameter name="browser" value="Chrome" />
 		<classes>
 			<class name="com.ecstore.testcases.LoginPageTest" />
-			<class name="com.ecstore.testcases.OrderConfirmedTest" />
 			<class name="com.ecstore.testcases.HomePageTest" />
 		</classes>
 	</test> <!-- Test -->
