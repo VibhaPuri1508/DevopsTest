@@ -1,8 +1,5 @@
 pipeline{
    agent any
-     environment{
-      PATH = "C:\\Program Files\\apache-maven-3.9.3\\bin"
-    }
     triggers{
      cron(' 0 06 * * * ')
     } 
