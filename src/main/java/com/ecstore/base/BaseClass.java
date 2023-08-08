@@ -27,8 +27,8 @@ public class BaseClass {
 
 	@BeforeSuite(groups = { "Smoke", "Sanity", "Regression" })
 	public void loadConfig() {
-		moveExecutionResultsToArchivedFolder() ;
-		moveScreenshotsToArchivedFolder();
+		//moveExecutionResultsToArchivedFolder() ;
+		//moveScreenshotsToArchivedFolder();
 		//ExtentManager.setExtent();
 		DOMConfigurator.configure("log4j.xml");
 		try {
