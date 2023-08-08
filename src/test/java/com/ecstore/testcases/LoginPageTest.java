@@ -1,16 +1,15 @@
 package com.ecstore.testcases;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import com.ecstore.base.BaseClass;
-import com.ecstore.pageobjects.LoginPage;
 import com.ecstore.pageobjects.HomePage;
+import com.ecstore.pageobjects.LoginPage;
 import com.ecstore.utility.ExcelReaderLibrary;
-import com.ecstore.utility.Log;
 
 public class LoginPageTest extends BaseClass {
 	private LoginPage loginPage;
@@ -48,18 +47,18 @@ public class LoginPageTest extends BaseClass {
 	
 	@Test(groups = {"Smoke","Sanity"},dataProvider = "credentials")
 	public void loginTest(String uname, String pswd) throws Throwable {
-		Log.startTestCase("loginTest");
+		//Log.startTestCase("loginTest");
 		homePage= new HomePage();
-		Log.info("user is going to click on SignIn");
+		//Log.info("user is going to click on SignIn");
 		loginPage=homePage.clickOnSignIn();
-		Log.info("Enter Username and Password");
+		//Log.info("Enter Username and Password");
 		homePage=loginPage.login(uname,pswd);
 	    String actualURL=homePage.getCurrentURL();
 	    String expectedURL="https://magento.softwaretestingboard.com/";
-	    Log.info("Verifying if user is able to login");
+	   // Log.info("Verifying if user is able to login");
 	    AssertJUnit.assertEquals(actualURL, expectedURL);
-	    Log.info("Login is Sucess");
-	    Log.endTestCase("loginTest");
+	    //Log.info("Login is Sucess");
+	    //Log.endTestCase("loginTest");
 	}
 
 }
