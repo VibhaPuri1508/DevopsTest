@@ -1,96 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="7" passed="6" failed="1" skipped="0">
+<testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-24T09:44:22Z" name="Suite" finished-at="2023-07-24T09:45:58Z" duration-ms="96110">
+  <suite started-at="2023-08-08T15:27:08Z" name="Suite" finished-at="2023-08-08T15:27:50Z" duration-ms="41262">
     <groups>
       <group name="Sanity">
-        <method signature="LoginPageTest.loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@3e2822]" name="loginTest" class="com.ecstore.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" name="loginTest" class="com.ecstore.testcases.LoginPageTest"/>
       </group> <!-- Sanity -->
       <group name="Smoke">
-        <method signature="HomePageTest.verifyLogo()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" name="verifyLogo" class="com.ecstore.testcases.HomePageTest"/>
-        <method signature="HomePageTest.verifyTitle()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" name="verifyTitle" class="com.ecstore.testcases.HomePageTest"/>
-        <method signature="HomePageTest.verifyTitleError()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" name="verifyTitleError" class="com.ecstore.testcases.HomePageTest"/>
-        <method signature="LoginPageTest.loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@3e2822]" name="loginTest" class="com.ecstore.testcases.LoginPageTest"/>
-        <method signature="MyAccountPageTest.validateOrderHistory()[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" name="validateOrderHistory" class="com.ecstore.testcases.MyAccountPageTest"/>
-        <method signature="MyAccountPageTest.validateWishList()[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" name="validateWishList" class="com.ecstore.testcases.MyAccountPageTest"/>
-        <method signature="SearchResultTest.searchProduct()[pri:0, instance:com.ecstore.testcases.SearchResultTest@79e18e38]" name="searchProduct" class="com.ecstore.testcases.SearchResultTest"/>
+        <method signature="HomePageTest.verifyLogo()[pri:0, instance:com.ecstore.testcases.HomePageTest@78f9ed3e]" name="verifyLogo" class="com.ecstore.testcases.HomePageTest"/>
+        <method signature="LoginPageTest.loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" name="loginTest" class="com.ecstore.testcases.LoginPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2023-07-24T09:44:22Z" name="Smoke" finished-at="2023-07-24T09:45:58Z" duration-ms="96110">
-      <class name="com.ecstore.testcases.OrderConfirmedTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.ecstore.testcases.OrderConfirmedTest@4a9f80d3]" started-at="2023-07-24T15:14:21Z" name="loadConfig" finished-at="2023-07-24T15:14:22Z" duration-ms="474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecstore.testcases.OrderConfirmedTest@4a9f80d3]" started-at="2023-07-24T15:15:58Z" name="afterSuite" finished-at="2023-07-24T15:15:58Z" duration-ms="120" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.ecstore.testcases.OrderConfirmedTest -->
-      <class name="com.ecstore.testcases.SearchResultTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.SearchResultTest@79e18e38]" started-at="2023-07-24T15:14:22Z" name="setup" finished-at="2023-07-24T15:14:42Z" duration-ms="20693" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="searchProduct()[pri:0, instance:com.ecstore.testcases.SearchResultTest@79e18e38]" started-at="2023-07-24T15:14:42Z" name="searchProduct" finished-at="2023-07-24T15:14:46Z" duration-ms="3508" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.SearchResultTest@79e18e38]" started-at="2023-07-24T15:14:46Z" name="tearDown" finished-at="2023-07-24T15:14:46Z" duration-ms="680" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ecstore.testcases.SearchResultTest -->
-      <class name="com.ecstore.testcases.MyAccountPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" started-at="2023-07-24T15:15:20Z" name="setup" finished-at="2023-07-24T15:15:26Z" duration-ms="5776" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="validateOrderHistory()[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" started-at="2023-07-24T15:15:26Z" name="validateOrderHistory" finished-at="2023-07-24T15:15:38Z" duration-ms="11894" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateOrderHistory -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" started-at="2023-07-24T15:15:38Z" name="tearDown" finished-at="2023-07-24T15:15:40Z" duration-ms="1685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" started-at="2023-07-24T15:15:40Z" name="setup" finished-at="2023-07-24T15:15:45Z" duration-ms="5849" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="validateWishList()[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" started-at="2023-07-24T15:15:45Z" name="validateWishList" finished-at="2023-07-24T15:15:57Z" duration-ms="11404" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateWishList -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.MyAccountPageTest@533b266e]" started-at="2023-07-24T15:15:57Z" name="tearDown" finished-at="2023-07-24T15:15:58Z" duration-ms="800" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ecstore.testcases.MyAccountPageTest -->
+    <test started-at="2023-08-08T15:27:08Z" name="Test" finished-at="2023-08-08T15:27:50Z" duration-ms="41262">
       <class name="com.ecstore.testcases.HomePageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:00Z" name="setup" finished-at="2023-07-24T15:15:05Z" duration-ms="5345" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.HomePageTest@78f9ed3e]" started-at="2023-08-08T20:57:37Z" name="setup" finished-at="2023-08-08T20:57:47Z" duration-ms="10072" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,91 +25,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyLogo()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:05Z" name="verifyLogo" finished-at="2023-07-24T15:15:05Z" duration-ms="90" status="PASS">
+        <test-method signature="verifyLogo()[pri:0, instance:com.ecstore.testcases.HomePageTest@78f9ed3e]" started-at="2023-08-08T20:57:47Z" name="verifyLogo" finished-at="2023-08-08T20:57:48Z" duration-ms="1009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:05Z" name="tearDown" finished-at="2023-07-24T15:15:06Z" duration-ms="567" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:06Z" name="setup" finished-at="2023-07-24T15:15:12Z" duration-ms="6105" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyTitle()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:12Z" name="verifyTitle" finished-at="2023-07-24T15:15:12Z" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:12Z" name="tearDown" finished-at="2023-07-24T15:15:13Z" duration-ms="615" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:13Z" name="setup" finished-at="2023-07-24T15:15:19Z" duration-ms="6086" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyTitleError()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:19Z" name="verifyTitleError" finished-at="2023-07-24T15:15:19Z" duration-ms="8" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected:<Home Page> but was:<Home Page1>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<Home Page> but was:<Home Page1>
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
-	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
-	at com.ecstore.testcases.HomePageTest.verifyTitleError(HomePageTest.java:49)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitleError -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.HomePageTest@5b6813df]" started-at="2023-07-24T15:15:20Z" name="tearDown" finished-at="2023-07-24T15:15:20Z" duration-ms="680" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.HomePageTest@78f9ed3e]" started-at="2023-08-08T20:57:48Z" name="tearDown" finished-at="2023-08-08T20:57:50Z" duration-ms="1538" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.ecstore.testcases.HomePageTest -->
       <class name="com.ecstore.testcases.LoginPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@3e2822]" started-at="2023-07-24T15:14:46Z" name="setup" finished-at="2023-07-24T15:14:52Z" duration-ms="5622" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" started-at="2023-08-08T20:57:08Z" name="loadConfig" finished-at="2023-08-08T20:57:08Z" duration-ms="464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" started-at="2023-08-08T20:57:09Z" name="setup" finished-at="2023-08-08T20:57:24Z" duration-ms="15130" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -196,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@3e2822]" started-at="2023-07-24T15:14:52Z" name="loginTest" data-provider="credentials" finished-at="2023-07-24T15:15:00Z" duration-ms="7498" status="PASS">
+        <test-method signature="loginTest(java.lang.String, java.lang.String)[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" started-at="2023-08-08T20:57:24Z" name="loginTest" data-provider="credentials" finished-at="2023-08-08T20:57:36Z" duration-ms="12130" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -212,11 +66,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.LoginPageTest@3e2822]" started-at="2023-07-24T15:15:00Z" name="tearDown" finished-at="2023-07-24T15:15:00Z" duration-ms="492" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" started-at="2023-08-08T20:57:36Z" name="tearDown" finished-at="2023-08-08T20:57:37Z" duration-ms="1313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ecstore.testcases.LoginPageTest@778ca8ef]" started-at="2023-08-08T20:57:50Z" name="afterSuite" finished-at="2023-08-08T20:57:51Z" duration-ms="1015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
       </class> <!-- com.ecstore.testcases.LoginPageTest -->
-    </test> <!-- Smoke -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

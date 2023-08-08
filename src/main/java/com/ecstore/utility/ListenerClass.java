@@ -38,7 +38,7 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 			WebDriver driver = base.getDriver();
 			action.screenShot(driver, methodName);
 		}
-		
+				
 		
 	}
 

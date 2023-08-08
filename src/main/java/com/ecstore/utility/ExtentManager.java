@@ -19,6 +19,6 @@ public class ExtentManager {
 		extent.setSystemInfo("Tester", "Vibha");
 	}
 	public static void endReport() {
-		extent.flush();
+		//extent.flush();
 	}
 }
