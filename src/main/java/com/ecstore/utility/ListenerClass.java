@@ -1,5 +1,4 @@
 package com.ecstore.utility;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
