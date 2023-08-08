@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import com.ecstore.base.BaseClass;
 import com.ecstore.pageobjects.HomePage;
-//import com.ecstore.utility.Log;
+
 
 public class HomePageTest extends BaseClass {
 	private HomePage homePage;
@@ -25,10 +25,8 @@ public class HomePageTest extends BaseClass {
 	
 	@Test(groups = "Smoke")
 	public void verifyLogo() throws Throwable {
-		//Log.startTestCase("verifyLogo");
 		homePage= new HomePage();
 		boolean result=homePage.validateLogo();
 		AssertJUnit.assertTrue(result);
-		//Log.endTestCase("verifyLogo");
 	}
 }

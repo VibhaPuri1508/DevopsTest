@@ -15,10 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
-//import com.ecstore.utility.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
@@ -27,9 +24,6 @@ public class BaseClass {
 
 	@BeforeSuite(groups = { "Smoke", "Sanity", "Regression" })
 	public void loadConfig() {
-		//moveExecutionResultsToArchivedFolder() ;
-		//moveScreenshotsToArchivedFolder();
-		//ExtentManager.setExtent();
 		DOMConfigurator.configure("log4j.xml");
 		try {
 			prop = new Properties();
@@ -110,10 +104,5 @@ public class BaseClass {
 	      {
 	         System.out.println("File movement failed.");
 	      }  
-	}
-
-	@AfterSuite(groups = { "Smoke", "Regression", "Sanity" })
-	public void afterSuite() {
-		//ExtentManager.endReport();
 	}
 }

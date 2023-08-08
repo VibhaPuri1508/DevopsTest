@@ -47,18 +47,12 @@ public class LoginPageTest extends BaseClass {
 	
 	@Test(groups = {"Smoke","Sanity"},dataProvider = "credentials")
 	public void loginTest(String uname, String pswd) throws Throwable {
-		//Log.startTestCase("loginTest");
 		homePage= new HomePage();
-		//Log.info("user is going to click on SignIn");
 		loginPage=homePage.clickOnSignIn();
-		//Log.info("Enter Username and Password");
 		homePage=loginPage.login(uname,pswd);
 	    String actualURL=homePage.getCurrentURL();
 	    String expectedURL="https://magento.softwaretestingboard.com/";
-	   // Log.info("Verifying if user is able to login");
 	    AssertJUnit.assertEquals(actualURL, expectedURL);
-	    //Log.info("Login is Sucess");
-	    //Log.endTestCase("loginTest");
 	}
 
 }
