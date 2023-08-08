@@ -11,7 +11,7 @@ pipeline{
      }
     stage("code clean"){
          steps{
-          bat "mvn install"
+          bat "echo code clean"
        }
      }
     stage("code test"){
