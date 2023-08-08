@@ -53,7 +53,7 @@ public class ListenerClass extends ExtentManager implements ITestListener {
 	}
 
 	public void onFinish(ITestContext context) {
-		 extent.flush();
+		// extent.flush();
 	}
 
 	@Override
