@@ -8271,3 +8271,11 @@
 2023-08-08 20:57:51 DEBUG cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
 2023-08-08 20:57:51 DEBUG cache:45 - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
 2023-08-08 20:57:51 DEBUG cache:45 - Loading template for "logs-view/testrunner-logs-view.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/vibhapuri/.m2/repository/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar!/com/aventstack/extentreports/view/logs-view/testrunner-logs-view.ftl"
+2023-08-08 21:11:07 INFO  Log:11 - =====================================loginTest TEST START=========================================
+2023-08-08 21:11:08 INFO  Log:21 - user is going to click on SignIn
+2023-08-08 21:11:22 INFO  Log:21 - Enter Username and Password
+2023-08-08 21:11:40 INFO  Log:21 - Verifying if user is able to login
+2023-08-08 21:11:40 INFO  Log:21 - Login is Sucess
+2023-08-08 21:11:40 INFO  Log:15 - =====================================loginTest TEST END=========================================
+2023-08-08 21:12:23 INFO  Log:11 - =====================================verifyLogo TEST START=========================================
+2023-08-08 21:12:38 INFO  Log:15 - =====================================verifyLogo TEST END=========================================
