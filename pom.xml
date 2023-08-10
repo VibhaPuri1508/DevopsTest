@@ -9,6 +9,8 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Other properties ... -->   
+		 <sonar.sources>src/main/java</sonar.sources>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -79,12 +81,8 @@
         </dependency>
 
 	</dependencies>
-
-
-	 <build>
-
-        <sourceDirectory>src</sourceDirectory>
-
+	  <build>
+         <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
