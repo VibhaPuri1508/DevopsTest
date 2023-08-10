@@ -19,23 +19,23 @@ import org.testng.annotations.BeforeSuite;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	public static Properties prop;
-	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
+    protected Properties prop;
+    protected static  ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
+    String dir ="user.dir";
 
 	@BeforeSuite(groups = { "Smoke", "Sanity", "Regression" })
-	public void loadConfig() {
+	public void loadConfig() throws FileNotFoundException {
 		DOMConfigurator.configure("log4j.xml");
+		prop = new Properties();
+		
 		try {
-			prop = new Properties();
 			FileInputStream file = new FileInputStream(
-					System.getProperty("user.dir") + "/Configuration/Config.properties");
+					System.getProperty(dir) + "/Configuration/Config.properties");
 			prop.load(file);
 
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		} 
 	}
 
 	public static WebDriver getDriver() {
@@ -58,51 +58,5 @@ public class BaseClass {
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		getDriver().get(prop.getProperty("url"));
-	}
-	
-	public void moveExecutionResultsToArchivedFolder() {
-		File fileData = new File(System.getProperty("user.dir") + "/CurrentTestResults/ExtentReport/" + "MyReport.html");
-		File destination = new File (System.getProperty("user.dir") + "/ArchivedTestResults/ExtentReport/" + "MyArchivedReport.html");
-         // renaming the file and moving it to a new location
-		if (fileData.renameTo(destination)) {
-			// if file copied successfully then delete the original file
-			fileData.delete();
-			System.out.println("File moved successfully");
-		} else {
-			System.out.println("Failed to move the file");
-		}
-	}
-	
-	public void moveScreenshotsToArchivedFolder() {
-		String str_source = System.getProperty("user.dir") + "/CurrentTestResults/Screenshots";
-	      String str_target = System.getProperty("user.dir") + "/ArchivedTestResults/ArchivedScreenshots/";
-	      File directory = new File(str_source);
-	      File[] filesList = directory.listFiles();
-
-	      for(File file:filesList)
-	      {
-	          System.out.println(file.getPath());
-	      }
-
-	      Path result = null;
-	      try 
-	      {
-	         for(File file:filesList)
-	         {
-	             result = Files.move(Paths.get(file.getPath().toString()), Paths.get(str_target+file.getName().toString()));
-	         }
-	      } 
-	      catch (IOException e) 
-	      {
-	         System.out.println("Exception while moving file: " + e.getMessage());
-	      }
-	      if(result != null) 
-	      {
-	         System.out.println("File moved successfully.");
-	      }
-	      else
-	      {
-	         System.out.println("File movement failed.");
-	      }  
 	}
 }

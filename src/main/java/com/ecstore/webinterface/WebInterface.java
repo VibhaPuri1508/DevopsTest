@@ -24,7 +24,6 @@ public interface WebInterface {
 	public void mouseOverElement(WebDriver driver,WebElement element);
 	public boolean moveToElement(WebDriver driver, WebElement ele);
 	public boolean mouseover(WebDriver driver, WebElement ele);
-	public boolean draggable(WebDriver driver,WebElement source, int x, int y);
 	public boolean draganddrop(WebDriver driver,WebElement source, WebElement target);
 	public boolean slider(WebDriver driver,WebElement ele, int x, int y);
 	public boolean rightclick(WebDriver driver,WebElement ele);

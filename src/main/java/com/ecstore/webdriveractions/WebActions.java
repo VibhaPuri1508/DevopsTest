@@ -422,28 +422,6 @@ public class WebActions extends BaseClass implements WebInterface {
 	}
 
 	@Override
-	public boolean draggable(WebDriver driver, WebElement source, int x, int y) {
-		boolean flag = false;
-		try {
-			new Actions(driver).dragAndDropBy(source, x, y).build().perform();
-			Thread.sleep(5000);
-			flag = true;
-			return true;
-
-		} catch (Exception e) {
-
-			return false;
-
-		} finally {
-			if (flag) {
-				System.out.println("Draggable Action is performed on \"" + source + "\"");
-			} else if (!flag) {
-				System.out.println("Draggable action is not performed on \"" + source + "\"");
-			}
-		}
-	}
-
-	@Override
 	public boolean draganddrop(WebDriver driver, WebElement source, WebElement target) {
 		boolean flag = false;
 		try {
