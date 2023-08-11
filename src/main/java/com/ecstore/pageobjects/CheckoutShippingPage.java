@@ -71,14 +71,6 @@ public class CheckoutShippingPage extends BaseClass{
 		Thread.sleep(2000);
 	}
 	
-	public void selectRegion(String region) throws Throwable {
-		action.selectByVisibleText(region,selectRegion);
-	}
-	
-	public void selectCountry(String country) throws Throwable {
-		action.selectByVisibleText(country,selectCountry);
-	}
-	
 	public void shippingMethodTableRate() throws Throwable {
 		action.explicitWait(getDriver(), shippingMethodTableRate, 30);
 		action.click(getDriver(), shippingMethodTableRate);

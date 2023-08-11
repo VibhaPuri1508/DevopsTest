@@ -39,9 +39,5 @@ public class CustomerAccountCreationPage extends BaseClass {
 	public boolean validateAcountCreatePage() throws Throwable {
 		 return action.isDisplayed(getDriver(), pageTitle);
 	}
-	
-	public MyAccountPage validateRegistration() throws Throwable {
-		action.mouseHoverByJavaScript(createAccountBtn);
-		return new MyAccountPage();
-	}
+
 }

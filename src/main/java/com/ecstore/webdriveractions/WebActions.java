@@ -1,27 +1,14 @@
 package com.ecstore.webdriveractions;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.ecstore.webinterface.WebInterface;
 import com.ecstore.base.BaseClass;
 
@@ -137,121 +124,7 @@ public class WebActions extends BaseClass implements WebInterface {
 		}
 		return flag;
 	}
-
-	@Override
-	public boolean selectBySendkeys(String value, WebElement element) {
-		boolean flag = false;
-		try {
-			element.sendKeys(value);
-			flag = true;
-			return true;
-		} catch (Exception e) {
-
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("Select value from the DropDown");
-			} else {
-				System.out.println("Not Selected value from the DropDown");
-			}
-		}
-	}
-
-	/**
-	 * select value from DropDown by using selectByIndex
-	 */
-	@Override
-	public boolean selectByIndex(WebElement element, int index) {
-		boolean flag = false;
-		try {
-			Select s = new Select(element);
-			s.selectByIndex(index);
-			flag = true;
-			return true;
-		} catch (Exception e) {
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("Option selected by Index");
-			} else {
-				System.out.println("Option not selected by Index");
-			}
-		}
-	}
-
-	/**
-	 * select value from DD by using value
-	 */
-
-	@Override
-	public boolean selectByValue(WebElement element, String value) {
-		boolean flag = false;
-		try {
-			Select s = new Select(element);
-			s.selectByValue(value);
-			flag = true;
-			return true;
-		} catch (Exception e) {
-
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("Option selected by Value");
-			} else {
-				System.out.println("Option not selected by Value");
-			}
-		}
-	}
-
-	/**
-	 * select value from DropDown by using selectByVisibleText
-	 */
-
-	@Override
-	public boolean selectByVisibleText(String visibletext, WebElement ele) {
-		boolean flag = false;
-		try {
-			Select s = new Select(ele);
-			s.selectByVisibleText(visibletext);
-			flag = true;
-			return true;
-		} catch (Exception e) {
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("Option selected by VisibleText");
-			} else {
-				System.out.println("Option not selected by VisibleText");
-			}
-		}
-	}
-
-	@Override
-	public boolean mouseHoverByJavaScript(WebElement ele) {
-		boolean flag = false;
-		try {
-			WebElement mo = ele;
-			String javaScript = "var evObj = document.createEvent('MouseEvents');"
-					+ "evObj.initMouseEvent(\"mouseover\",true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);"
-					+ "arguments[0].dispatchEvent(evObj);";
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript(javaScript, mo);
-			flag = true;
-			return true;
-		}
-
-		catch (Exception e) {
-
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("MouseOver Action is performed");
-			} else {
-				System.out.println("MouseOver Action is not performed");
-			}
-		}
-	}
-
+	
 	/**
 	 * Click on WebElement by using java script
 	 */
@@ -320,25 +193,6 @@ public class WebActions extends BaseClass implements WebInterface {
 	}
 
 	@Override
-	public boolean click1(WebElement locator, String locatorName) {
-		boolean flag = false;
-		try {
-			locator.click();
-			flag = true;
-			return true;
-		} catch (Exception e) {
-			return false;
-		} finally {
-			if (flag) {
-				System.out.println("Able to click on \"" + locatorName + "\"");
-			} else {
-				System.out.println("Click Unable to click on \"" + locatorName + "\"");
-			}
-		}
-
-	}
-
-	@Override
 	public void implicitWait(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeOut));
 	}
@@ -353,22 +207,6 @@ public class WebActions extends BaseClass implements WebInterface {
 	public void pageLoadTimeOut(WebDriver driver, int timeOut) {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(timeOut));
 	}
-
-	@Override
-	public void screenShot(WebDriver driver, String filename) {
-		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String destination = System.getProperty("user.dir") + "/CurrentTestResults/ScreenShots/" + filename + "_" + dateName + ".png";
-
-		try {
-			FileUtils.copyFile(source, new File(destination));
-			System.out.println("***Placed screen shot in " + destination + " ***");
-		} catch (Exception e) {
-			e.getMessage();
-		}
-	}
-
 
 	/**
 	 * Scroll page down pixel
