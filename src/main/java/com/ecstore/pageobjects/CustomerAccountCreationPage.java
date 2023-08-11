@@ -40,23 +40,6 @@ public class CustomerAccountCreationPage extends BaseClass {
 		 return action.isDisplayed(getDriver(), pageTitle);
 	}
 	
-	public void createAccount(String fName, 
-			String lName, 
-			String email, 
-			String pwd, 
-			String confirmPwd
-		) throws Throwable {
-	
-		action.type(firstName, fName);
-		action.type(lastName, lName);
-		action.explicitWait(getDriver(), emailAddress, 20);
-		action.mouseOverElement(getDriver(),emailAddress);
-		action.type(emailAddress, email);
-		action.type(password, pwd);
-		action.type(passwordConfirmation, confirmPwd);
-		
-	}
-	
 	public MyAccountPage validateRegistration() throws Throwable {
 		action.mouseHoverByJavaScript(createAccountBtn);
 		return new MyAccountPage();
