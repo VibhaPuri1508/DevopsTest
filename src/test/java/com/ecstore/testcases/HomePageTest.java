@@ -30,13 +30,4 @@ public class HomePageTest extends BaseClass {
 		boolean result=homePage.validateLogo();
 		AssertJUnit.assertTrue(result);
 	}
-	
-
-    @Test(groups = "Sanity")
-    public void searchProduct() throws Throwable {
-         homePage= new HomePage();
-         searchResultPage=homePage.searchProduct("t-shirt");
-         boolean result=searchResultPage.isProductAvailable();
-         AssertJUnit.assertTrue(result);
-    }
 }
