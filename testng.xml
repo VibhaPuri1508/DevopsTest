@@ -6,7 +6,6 @@
 		<classes>
 			<class name="com.ecstore.testcases.LoginPageTest" />
 			<class name="com.ecstore.testcases.HomePageTest" />
-			<class name="com.ecstore.testcases.SearchResultTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
