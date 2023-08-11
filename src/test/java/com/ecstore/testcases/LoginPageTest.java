@@ -8,6 +8,7 @@ import com.ecstore.base.BaseClass;
 import com.ecstore.pageobjects.HomePage;
 import com.ecstore.pageobjects.LoginPage;
 
+
 public class LoginPageTest extends BaseClass {
 	private LoginPage loginPage;
 	private HomePage homePage;
