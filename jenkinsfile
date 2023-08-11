@@ -16,7 +16,7 @@ pipeline{
      }
     stage("code test"){
          steps{
-          bat "mvn clean test sonar:sonar"
+          bat "mvn clean install  sonar:sonar -Dsonar.login=sqa_2b9abeaf77f78ed9826e2e0590d8ffda21bab02f>"
        }
      }
   }
