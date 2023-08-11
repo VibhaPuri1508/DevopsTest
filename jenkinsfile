@@ -23,6 +23,24 @@ pipeline{
           bat "mvn clean install  sonar:sonar -Dsonar.token=sqa_2b9abeaf77f78ed9826e2e0590d8ffda21bab02f"
        }
      }
+    stage("publish to artifactory"){
+         steps{
+           rtMavenDeployer(
+            id: 'deployer',
+            serverId: 'NagpDevopsArtifactory',
+            releaseRepo: 'NagpDevopsRepository',
+            snapshotRepo:  'NagpDevopsRepository'
+          )
+          rtMavenRun(
+            pom: 'pom.xml',
+            goals: 'clean install',
+            deployerId: 'deployer'
+         )
+         rtPublishBuildInfo(
+           serverId: 'NagpDevopsArtifactory',
+         )
+       }
+     }
   }
   post{
      success {
