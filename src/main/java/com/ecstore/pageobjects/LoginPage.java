@@ -34,7 +34,6 @@ public class LoginPage extends BaseClass {
 		action.type(password, pswd);
 		action.javascriptButtonClick(getDriver(), signInBtn);
 		Thread.sleep(2000);
-		//myAccountPage=);
 		return new HomePage();
 	}
 	
