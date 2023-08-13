@@ -1,5 +1,9 @@
 pipeline{
    agent any
+   tools {
+        maven "MAVEN"
+        jdk "JDK"
+    }
     triggers{
      cron(' 0 06 * * * ')
     } 
@@ -16,7 +20,25 @@ pipeline{
      }
     stage("code test"){
          steps{
-          bat "mvn clean install  sonar:sonar -Dsonar.token=sqa_2b9abeaf77f78ed9826e2e0590d8ffda21bab02f"
+          bat "mvn clean install"
+       }
+     }
+    stage("publish to artifactory"){
+         steps{
+           rtMavenDeployer(
+            id: 'deployer',
+            serverId: 'NagpDevopsArtifactory',
+            releaseRepo: 'NagpDevopsRepository',
+            snapshotRepo:  'NagpDevopsRepository'
+          )
+          rtMavenRun(
+            pom: 'pom.xml',
+            goals: 'clean install',
+            deployerId: 'deployer'
+         )
+         rtPublishBuildInfo(
+           serverId: 'NagpDevopsArtifactory',
+         )
        }
      }
   }
