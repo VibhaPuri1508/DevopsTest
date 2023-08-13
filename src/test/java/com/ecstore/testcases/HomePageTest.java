@@ -26,4 +26,11 @@ public class HomePageTest extends BaseClass {
 		boolean result=homePage.validateLogo();
 		AssertJUnit.assertTrue(result);
 	}
+	
+	@Test(groups = "Sanity")
+	public void verifyTitle() throws Throwable {
+		homePage= new HomePage();
+		String actTitle=homePage.getMyPageTitle();
+		AssertJUnit.assertEquals(actTitle, "Home Page");
+	}
 }
