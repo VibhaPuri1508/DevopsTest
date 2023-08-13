@@ -10,17 +10,17 @@ pipeline{
     stages{
      stage("code build"){
          steps{
-          bat "echo starting the program"
-       }
-     }
-    stage("code clean"){
-         steps{
-          bat "echo code clean"
+          bat "mvn clean package -DskipTest=true"
        }
      }
     stage("code test"){
          steps{
-         bat "mvn clean install  sonar:sonar -Dsonar.token=sqa_2b9abeaf77f78ed9826e2e0590d8ffda21bab02f"
+          bat "mvn clean test"
+       }
+     }
+    stage("sonarqube analysis "){
+         steps{
+         bat "mvn sonar:sonar -Dsonar.token=sqa_2b9abeaf77f78ed9826e2e0590d8ffda21bab02f"
        }
      }
     stage("publish to artifactory"){
@@ -43,8 +43,11 @@ pipeline{
      }
   }
   post{
-     success {
-      bat "echo success"
+      always {
+          junit(
+        allowEmptyResults: true,
+        testResults: '*/test-reports/.xml'
+      )
      }
   }
 
